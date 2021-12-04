@@ -8,7 +8,7 @@ const prefix = "!"
 const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"));
 console.log(commandFiles)
 const NekoClient = new neko()
-client.login('OTE2NDg4MTM5NDU4MTA1MzY1.Yaq4Fw.UMLnWHgNwNuDjCmLv1mLf-PFvEY')
+client.login('OTE2NDg4MTM5NDU4MTA1MzY1.Yaq4Fw.FKxgcKI4TGwMoLgbBWVeceUajVk')
 
 client.on("ready", () => {
     client.user.setPresence({
