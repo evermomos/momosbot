@@ -15,7 +15,7 @@ client.on("ready", () => {
         type: "PLAYING"
     }]
     })
-    console.log("balls ready!");
+    console.log("balls ready to CBT!");
  });
  client.on("messageCreate", async message => {
     if(message.author.bot) return

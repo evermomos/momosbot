@@ -4,7 +4,6 @@ module.exports = {
     async execute(message){
         const NekoClient = new neko()
         const image = await NekoClient.sfw.neko()
-        console.log(image)
         message.channel.send({ content: image.url })
     }
 }
