@@ -5,7 +5,7 @@ client.commands = new Discord.Collection()
 const fs = require("fs");
 const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"));
 const prefix = "!"
-client.login('process.env.TOKEN')
+client.login(process.env.TOKEN)
 
 client.on("ready", () => {
     client.user.setPresence({
