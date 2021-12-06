@@ -11,8 +11,9 @@ client.on("ready", () => {
     client.user.setPresence({
         status: "online",
         activities: [{
-        name: "Catgirsl",
-        type: "PLAYING"
+        name: "!help",
+        type: "STREAMING",
+        url: "http://www.twitch.tv/evermomos",
     }]
     })
     console.log("balls ready to CBT!");
