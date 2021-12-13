@@ -9,7 +9,7 @@ module.exports = {
             headers: { 'Content-Type': 'application/json' },
         })
         .then(async res => {
-            if(res.status != 200) return
+			if(res.status !== 200) return message.channel.send({ content: `Error ${res.status} ${res.statusText}` });
             const body = await res.json()
             if(!body.files) return message.channel.send({ content: "Invalid arguments, valid arguments are: <https://waifu.pics/more>"})
             let links = ''
