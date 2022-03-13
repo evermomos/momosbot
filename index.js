@@ -5,7 +5,7 @@ client.commands = new Discord.Collection()
 const fs = require("fs");
 const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"));
 const prefix = "!"
-client.login(process.env.TOKEN)
+client.login('OTE2NDg4MTM5NDU4MTA1MzY1.Yaq4Fw.IWu3-hVpiolVSaWn4uNIciGh09w')
 
 client.on("ready", () => {
     client.user.setPresence({
@@ -26,7 +26,7 @@ client.on("ready", () => {
     if(!client.commands.has(commandName)) return
     const command = client.commands.get(commandName) 
     try{
-        command.execute(message, args);
+        command.execute(message, args, client);
     }catch(error){
         console.log(error)
         message.channel.send({ content: 'Unexpected error dumbass!'})
