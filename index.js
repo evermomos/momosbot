@@ -6,7 +6,6 @@ const fs = require("fs");
 const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"));
 const prefix = "!"
 client.login(process.env.TOKEN)
-
 client.on("ready", () => {
     client.user.setPresence({
         status: "online",
@@ -16,11 +15,15 @@ client.on("ready", () => {
         url: "http://www.twitch.tv/evermomos",
     }]
     })
-    console.log("balls ready to CBT!");
+    console.log("Bot Started");
 })
 
 client.on("messageCreate", async message => {
     if(message.author.bot) return
+    if(message.content.startsWith(`<@!916488139458105365>`)){
+        message.channel.send({content: 'https://media.discordapp.net/attachments/935989994735169546/949267971602255942/image0-44-1.gif'})
+        return
+    }
     if(!message.content.startsWith(prefix)) return
     let args = message.content.slice(prefix.length).trim().split(/ +/)
     const commandName = args.shift().toLowerCase();

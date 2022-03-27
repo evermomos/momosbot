@@ -1,6 +1,6 @@
 module.exports = {
     name: 'ping',
     execute(message){
-        message.channel.send({ content: `${Date.now()-message.createdTimestamp}ms`})
+        message.channel.send({ content: `Bot latency ${Date.now()-message.createdTimestamp}ms :cold_face: `})
     }
 }
