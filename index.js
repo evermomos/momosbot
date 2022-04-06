@@ -24,6 +24,10 @@ client.on("messageCreate", async message => {
         message.channel.send({content: 'https://media.discordapp.net/attachments/935989994735169546/949267971602255942/image0-44-1.gif'})
         return
     }
+    if(message.content.startsWith('si caben o no')){
+        message.channel.send({content: 'si cabeeen'})
+        return
+    }
     if(!message.content.startsWith(prefix)) return
     let args = message.content.slice(prefix.length).trim().split(/ +/)
     const commandName = args.shift().toLowerCase();
