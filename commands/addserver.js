@@ -12,7 +12,7 @@ module.exports = {
         const discordlink = args.shift()
         const color = args.shift()
         const name = args.join(" ")
-        const channel = client.channels.cache.get(OSChannel)
+        const channel = client.channels.cache.get('965847850602881025')
         const inviteinf = await client.fetchInvite(discordlink)
 		const embed = new MessageEmbed()
         .setTitle(name)
