@@ -12,6 +12,7 @@ module.exports = {
 			if(res.status !== 200) return message.channel.send({ content: `Error ${res.status} ${res.statusText}` });
             const body = await res.json()
             if(!body.files) return message.channel.send({ content: "Invalid arguments, valid arguments are: <https://waifu.pics/more>"})
+            if(args[0].toLowerCase() === 'nsfw' && message.guild !== null)
             if(args[0].toLowerCase() === 'nsfw' && !message.channel.nsfw) return message.channel.send({content: 'Este comando solo puede ser usado en canales NSFW.'})
             let links = ''
             for(let i = 0; i < 5; i++){

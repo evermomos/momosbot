@@ -40,6 +40,7 @@ client.on("messageCreate", async message => {
         message.channel.send({ content: 'Unexpected error dumbass!'})
     }
     return
+    
 
 })
 for(const file of commandFiles) {
