@@ -25,7 +25,7 @@ client.on("messageCreate", async message => {
         return
     }
     if(message.content.startsWith('si caben o no')){
-        message.channel.send({content: 'si cabeeen'})
+        message.channel.send({content: 'si cabeeeeeeen'})
         return
     }
     if(!message.content.startsWith(prefix)) return
