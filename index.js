@@ -4,13 +4,13 @@ client.commands = new Discord.Collection()
 client.aliases = new Discord.Collection();
 const fs = require("fs");
 const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"));
-const prefix = "!"
+const prefix = "+"
 client.login(process.env.TOKEN)
 client.on("ready", () => {
     client.user.setPresence({
         status: "online",
         activities: [{
-        name: "!help",
+        name: "+help",
         type: "STREAMING",
         url: "http://www.twitch.tv/evermomos",
     }]
